@@ -8,8 +8,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import starter.ui.ayudaPage.AyudaPageForm;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 public class AyudaPageTask implements Task {
     private final String itemMenuAyuda;
@@ -24,9 +23,8 @@ public class AyudaPageTask implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        System.out.println("Ruptura");
         actor.attemptsTo(
-                WaitUntil.the(AyudaPageForm.itemMenuAyudaPage.of(itemMenuAyuda),isClickable()).forNoMoreThan(10).seconds(),
+                WaitUntil.the(AyudaPageForm.itemMenuAyudaPage.of(itemMenuAyuda),isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(AyudaPageForm.itemMenuAyudaPage.of(itemMenuAyuda))
         );
         //System.out.println("Ruptura");

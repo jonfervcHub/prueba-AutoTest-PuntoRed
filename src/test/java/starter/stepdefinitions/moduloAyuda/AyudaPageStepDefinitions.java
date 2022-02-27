@@ -44,6 +44,7 @@ public class AyudaPageStepDefinitions {
 
     @Y("el usuario selecciona el {string} requerido")
     public void elUsuarioSeleccionaElItemMenuAyudaRequerido(String itemMenuAyuda) {
+        //System.out.println("ruptura");
         theActorInTheSpotlight().attemptsTo(
                 AyudaPageTask.whitAyudaPageTask(itemMenuAyuda)
         );
@@ -51,7 +52,7 @@ public class AyudaPageStepDefinitions {
 
     @Y("se valida la informacion desplegada versus la {string}")
     public void seValidaLaInformacionDesplegadaVersusLaInformacionEsperadaItem(String informacionEsperadaItem) {
-
+        //System.out.println("Ruptura");
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(AyudaPageForm.textoItemMenuAyudaPage,isVisible()).forNoMoreThan(10).seconds(),
                 Ensure.that(AyudaPageQuestions.textoItem().answeredBy(theActorInTheSpotlight())).contains(informacionEsperadaItem)

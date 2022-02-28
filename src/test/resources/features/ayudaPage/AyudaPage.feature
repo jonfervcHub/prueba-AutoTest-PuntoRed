@@ -38,5 +38,5 @@ Característica: Modulo Ayuda PuntoRed
     Y se valida la informacion desplegada versus la <informacionEsperadaItem>
 
     Ejemplos:
-      | textoTitulo               | consulta                                | itemMenuAyuda                             | informacionEsperadaItem     |
-      | "¿Cómo podemos ayudarte?" | "si tengo dudas con quien puedo hablar" | "tengo dudas con quien puedo hablar" | "contacto.faas@puntored.co" |
+      | textoTitulo               | consulta          | itemMenuAyuda     | informacionEsperadaItem     |
+      | "¿Cómo podemos ayudarte?" | "testear las Api" | "testear las Api" | "https://www.puntored.co/developers/#section_services" |

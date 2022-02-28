@@ -52,7 +52,7 @@ public class AyudaPageStepDefinitions {
 
     @Y("se valida la informacion desplegada versus la {string}")
     public void seValidaLaInformacionDesplegadaVersusLaInformacionEsperadaItem(String informacionEsperadaItem) {
-        //System.out.println("Ruptura");
+        System.out.println("Ruptura");
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(AyudaPageForm.textoItemMenuAyudaPage,isVisible()).forNoMoreThan(10).seconds(),
                 Ensure.that(AyudaPageQuestions.textoItem().answeredBy(theActorInTheSpotlight())).contains(informacionEsperadaItem)
